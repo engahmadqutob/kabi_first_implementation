@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
 }
 
@@ -9,29 +9,40 @@
     /* primary color */
     --color-primary: #063799;
     --color-primary-light: #B4C3E0;
-
-     
     --color-body-bg: #F2F3F9;
-    
+    --color-button-bg:#DAE0F0;
     --color-white: #FFFFFF;
- 
     --color-border: #c9c7c7;
     --color-border-light: #ccc;
-   
+    --color-border-dark: #656F77 ;
     --color-text-dark: #000000;
     --color-text-gray: #999595;
- 
-}
 
+}
 body {
     background-color: var(--color-body-bg) ;
 }
-
 .flex-rowReverse-spaceBetween-align-center {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+}
+.flex-justify-start-align-center {
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
+.flex-justify-center-align-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.flex-justify-space-between-align-center{
+   display: flex;
+    align-items: center;
+    justify-content:space-between;  
 }
 
 .main-section {
@@ -45,72 +56,59 @@ body {
     height: 100vh;
     width: 100%;
 }
-
 .header {
     grid-area: header;
     border-bottom: 1px solid var(--color-border-light);
     background-color: #fff;
+    width: 100%;
 }
-
 /* start user info */
 .header .user-info { 
     display: relative;
-     
 }
-
 .header .user-rectangle {
-    margin: 0px 10px;
+    margin: 0 10px;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid black;
 }
-
 .header .user-info .user-image {
     border-radius: 50%;
     height: 38px;
     width: 40px;
 }
-
 .header .user-info .user-name {
-    margin: 0px 10px;
+    margin: 0 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100px;
 }
-
 .header .user-info .user {
      width: 122px;
     text-transform: capitalize;
-    margin: 0px 15px;
+    margin: 0 15px;
 }
-
 .header .user-info .user .username {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .header .user-info .user p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: capitalize;
     color: var(--color-text-gray);
-
 }
-
 /* user-notification */
 .user-notification {
-    margin: 0px 10px;
+    margin: 0 10px;
 }
-
 .user-notification img {
-    padding: 0px 10px;
+    padding: 0 10px;
     width: 39px;
-
 }
-
 .user-info .user-languageBtn .btn {
     padding: 8px 13px;
     border: 1px solid var(--color-border);
@@ -120,10 +118,7 @@ body {
     cursor: pointer;
     font-family: system-ui;
  }
-
-
 /* end user info */
-
 
 /* start logos  kabi         */
 
@@ -134,15 +129,11 @@ body {
     align-items: center;
     margin-right: 20px;
 }
-
-
 .logos .kabi-logo img {
     border-radius: 20%;
     height: 45px;
     width: 63px;
 }
-
-
 .logos .menu-logo {
     display: none;
         border:1px solid var(--color-border);
@@ -155,7 +146,6 @@ body {
     width: 25px;
     padding: 3px;
 }
-
 .aside {
     grid-area: aside;
     border-right: 0.5px solid var(--color-border);
@@ -164,40 +154,27 @@ body {
     align-items: center;
     padding-top: 3px;
     background-color: #fff;
-
-
 }
-
 .aside .unorder-List ul {
     list-style-type: none;
-
-
 }
-
 .aside .unorder-List ul li {
     list-style-type: none;
     margin-top: 10px;
     border-radius: 5px;
     padding: 10px;
-
 }
-
-
 .aside .unorder-List ul li:hover {
     background-color: var(--color-primary-light);
     cursor: pointer;
-   
 }
 .aside .unorder-List ul li:active {
     background-color: var(--color-primary-light);
     cursor: pointer;
 }
-
 .aside .unorder-List ul li:hover svg  {
     stroke: var(--color-primary);
 }
-
-
 .sup-aside {
     grid-area: sup-aside;
     margin-top: 10px;
@@ -207,41 +184,31 @@ body {
     background-color: #fff;
     text-transform: capitalize;
     overflow: hidden;
-
 }
-
 .sup-aside ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
- 
+} 
 .sup-aside ul li .anchor:hover {
      border-top-left-radius: 5px;
     border-top-right-radius: 5px;
  }
-
-
 .sup-aside ul li {
     list-style-type: none;
     width: 100%;
     text-align: left;
     border-bottom: 1px solid var(--color-border-light);
 }
- 
 
 .sup-aside ul li a:hover {
     background-color: #063799;
     color: var(--color-white);
 }
-
 li.active {
     background-color: var(--color-primary-light);
 }
-
 .sup-aside ul li a {
     text-decoration: none;
     display: block;
@@ -249,43 +216,102 @@ li.active {
     padding: 12px 9px;
     color: var(--color-text-gray);
 }
-
- 
-
-
 .sup-aside ul li.active {
-  background-color: #063799;
- 
-       
+  background-color: #063799;    
 }
 .sup-aside ul li:hover
  {
     background-color: #063799;
      
 }
- 
 
 .sup-aside ul li.active a {
     color: #fff;
 }
-
 .sup-aside_li_after {
     position: relative;
 }
-
 .sup-aside_a_after::after {
     content: '';
     position: absolute;
     right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
     width: 14px;
     height: 14px;
-    background-image: url('./img/supaside-img/plus.svg');
+    background-image: url('../img/supaside-img/plus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
 }
-
  .sup-aside_a_after:hover::after{
-    background-image: url('./img//supaside-img/plus_white.svg');
+    background-image: url('../img/supaside-img/plus_white.svg');
 }
 
+/* content */
 
+.search-section{
+     margin-top: 8px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+}
+.search-section input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid var(--color-border);
+    padding: 0 8px;
+}
+.search-section .search-input{
+    flex: 1; /*fill the space to fit available space*/
+    min-width: 100px;
+    max-width: 300px;
+    position: relative;
+}
+
+.search-section .search-input::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+    height:15px;
+    background-image: url('../img/searchSection/exclamation-mark.svg');
+    background-size: contain;
+    border: 2px solid #656F77;
+    border-radius: 50%;
+    z-index: 1;
+}
+.search-section input::placeholder{
+    color: var(--color-text-gray);
+}
+.search-section button:first-of-type {
+    background-color: #063799;
+}
+.search-section button:first-of-type svg{
+    stroke: #fff;
+}
+.search-section button{
+    margin: 0 5px;
+    border: 0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background-color: var(--color-button-bg);
+    color: var(--color-primary);
+ text-transform: capitalize
+;}
+.search-section button svg{
+    width: 15px;
+    height: 17px;
+     margin:5px ;
+   
+}
+.search-section button .filter-span{
+    padding-right: 8px;
+}
  
