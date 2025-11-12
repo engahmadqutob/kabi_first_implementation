@@ -34,6 +34,7 @@
   .sup-aside.show {
     display: flex; /*i used flex because block maby change layout*/
     position: static; /* remove absolute positioning */
+    opacity:1;
   }
 
    .main-section:has(.aside.show) {
