@@ -1,7 +1,3 @@
-
-
-
-
 @media (max-width: 700px) {
   /* hide some header parts to save space */
   .user-info .user-languageBtn .btn,
@@ -9,26 +5,27 @@
   .header .user-rectangle {
     display: none;
   }
-  
+
   .logos .menu-logo {
     display: block;
   }
+
+  /* default: single column layout with hidden sidebars */
   .main-section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
       "content";
-     column-gap:9px;
-
+    column-gap: 9px;
   }
+
   .aside,
   .sup-aside {
     display: none;
     opacity: 0;
-     
   }
-   .aside.show,
+
   .aside.show,
   .sup-aside.show {
     display: flex; /* use flex so the shown sidebars keep layout */
@@ -36,37 +33,46 @@
     opacity: 1;
   }
 
-   .main-section:has(.aside.show) {
+  .main-section:has(.aside.show) {
     grid-template-columns: 70px 250px 1fr;
     grid-template-areas:
       "header header header"
       "aside sup-aside content";
   }
-   flex: 1; /*fill the space*/
-   max-width: 100%;
+
+  .sup-aside ul {
+    width: 100%;
+  }
+
+
+  /* search field */
+  .search-section .search-input {
+    flex: 1; /* fill the space */
+    max-width: 100%;
     padding: 3px;
-}
-.search-section .searchbtns{
-   display: flex;
-   gap: 2px;
-   flex-shrink: 1;
-}
-.search-section button {
-margin: 0;}
-.search-section .search-input input{
-  width: 100%;
+  }
+
+  .search-section .searchbtns {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 1;
+  }
+
+  .search-section button {
+    margin: 0;
+  }
+
+  .search-section .search-input input {
+    width: 100%;
+  }
+
+  .search-section .filter-span {
+    display: none;
+  }
 }
 
-.search-section .filter-span{
-  display: none;
-}
-
-}
- 
- 
 @media (max-width: 450px) {
-
-    .main-section:has(.aside.show) {
+  .main-section:has(.aside.show) {
     grid-template-columns: 70px 1fr;
     grid-template-areas:
       "header header"
@@ -79,8 +85,12 @@ margin: 0;}
 }
 
 
-
-
-
-
  
+
+
+
+
+
+
+
+
