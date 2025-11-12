@@ -29,26 +29,19 @@
      
   }
    .aside.show,
+  .aside.show,
   .sup-aside.show {
-    display: flex;  
-    position: static;  
+    display: flex; /* use flex so the shown sidebars keep layout */
+    position: static; /* remove absolute positioning when visible */
     opacity: 1;
   }
-   
+
    .main-section:has(.aside.show) {
-    grid-template-columns: 70px 180px 1fr;
+    grid-template-columns: 70px 250px 1fr;
     grid-template-areas:
       "header header header"
       "aside sup-aside content";
   }
-  .sup-aside ul {
-    width: 100%;
-  }
-  
-
-
-/* search field */
-.search-section .search-input{
    flex: 1; /*fill the space*/
    max-width: 100%;
     padding: 3px;
