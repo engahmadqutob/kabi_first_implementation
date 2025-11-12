@@ -47,7 +47,19 @@
   }
 }
 
-
+@media (max-width: 450px) {
+ 
+    .main-section:has(.aside.show) {
+    grid-template-columns: 70px   1fr !important;
+    grid-template-areas:
+      "header   header"
+      "aside   content";
+  }
+  /* Hide sup-aside below 450px */
+  .sup-aside.show {
+    display: none !important;
+  }
+}
 
 
 
