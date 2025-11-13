@@ -69,7 +69,21 @@
   .search-section .filter-span {
     display: none;
   }
+
+.vacancies{
+    margin: 15px 3px;
 }
+
+
+.request .icon-tabler-dots-vertical{
+     display: block;
+}
+.request .icon-tabler-trash ,
+.request .icon-tabler-pencil,
+.request .request-btn  {
+ display: none;
+}
+} /*end media 700px*/
 
 @media (max-width: 450px) {
   .main-section:has(.aside.show) {
