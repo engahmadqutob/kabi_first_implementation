@@ -1,9 +1,129 @@
-@media (max-width: 700px) {
+@media (max-width:1480px) {
+
+  .card-information .requestion-type {
+    margin-right: 0px;
+    word-break: break-all;
+
+  }
+
+  .requestion-type .info p {
+    border: none;
+  }
+
+  .box {
+
+    width: 173px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:1200px) {
+  body {
+    background-color: blue;
+  }
+
+  .budgeted-box {
+    flex-wrap: wrap;
+  }
+
+  .requestion-type {
+    flex: 1 1 60%;
+    min-width: 200px;
+  }
+
+  .box {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width:1100px) {
+
+  .sup-aside {
+    display: block
+  }
+}
+
+@media (max-width:1120px) {
+  body {
+    background-color: teal;
+  }
+
+  .card {
+    height: auto;
+  }
+}
+
+@media (max-width:919px) {
+  body {
+    background-color: lightcoral;
+  }
+
+  .card-information {
+    flex-direction: column;
+
+  }
+
+  .card-information .requestion-type {
+    padding-left: 16px;
+  }
+
+  .card-information .requestion-status {
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .requestion-status .h5-status {
+    margin-top: 10px;
+  }
+
+  .current-status {
+    justify-content: flex-start;
+  }
+
+  .budgeted-box {
+    justify-content: flex-start;
+    margin-top: 25px;
+  }
+
+  .box {
+
+    margin-right: 25px;
+    width: 184px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 759px) {
+
   /* hide some header parts to save space */
+  body {
+    background-color: lightblue;
+  }
+
   .user-info .user-languageBtn .btn,
   .user-info .user,
   .header .user-rectangle {
     display: none;
+  }
+
+  .aside {
+    position: relative;
+   }
+
+  .aside .open-supaside::after {
+    position: absolute;
+    content: '';
+    top: 101px;
+    left: 55px;
+    width: 10px;
+    padding: 4px;
+    height: 10px;
+    background-size: contain;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid var(--color-border-light);
+    background-image: url('../img/aside-img/right-mark.svg');
+
   }
 
   .logos .menu-logo {
@@ -26,18 +146,19 @@
     opacity: 0;
   }
 
-  .aside.show,
-  .sup-aside.show {
-    display: flex; /* use flex so the shown sidebars keep layout */
-    position: static; /* remove absolute positioning when visible */
+  .aside.show {
+    display: flex;
+    /* use flex so the shown sidebars keep layout */
+    position: static;
+    /* remove absolute positioning when visible */
     opacity: 1;
   }
 
   .main-section:has(.aside.show) {
-    grid-template-columns: 70px 250px 1fr;
+    grid-template-columns: 70px 1fr;
     grid-template-areas:
       "header header header"
-      "aside sup-aside content";
+      "aside content content";
   }
 
   .sup-aside ul {
@@ -47,7 +168,8 @@
 
   /* search field */
   .search-section .search-input {
-    flex: 1; /* fill the space */
+    flex: 1;
+    /* fill the space */
     max-width: 100%;
     padding: 3px;
   }
@@ -59,7 +181,7 @@
   }
 
   .search-section button {
-    margin: 0;
+    margin-right: 5px;
   }
 
   .search-section .search-input input {
@@ -70,20 +192,90 @@
     display: none;
   }
 
-.vacancies{
+  .vacancies {
     margin: 15px 3px;
-}
+  }
 
 
-.request .icon-tabler-dots-vertical{
-     display: block;
+  .request .icon-tabler-dots-vertical {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  .request .icon-tabler-trash,
+  .request .icon-tabler-pencil,
+  .request .request-btn {
+    display: none;
+  }
+
+
+
+
+
+  .card-information {
+    flex-direction: column;
+  }
+
+  .card-header .ratio .card-result {
+    font-size: 16px;
+    padding: 2px 2px;
+  }
+
+  .card-information .requestion-type {
+    margin-right: 0px;
+    padding-right: 20px;
+    padding-top: 0;
+    font-size: 19px;
+  }
+
+  .info-border-bottom {
+    width: 97%;
+  }
+
+  .card-information .requestion-status {
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .current-status {
+    justify-content: flex-start;
+  }
+
+  .approved-info {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  .h5-status {
+    font-size: 12px;
+  }
+
+  .info {
+    font-size: 15px;
+  }
+
+  .box {
+    margin-top: 25px;
+  }
+
+  .requestion-type .info p {
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .card {
+    padding-bottom: 30px;
+    margin-left: 10px;
+  }
+
+  .budgeted-box {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
-.request .icon-tabler-trash ,
-.request .icon-tabler-pencil,
-.request .request-btn  {
- display: none;
-}
-} /*end media 700px*/
+
+/*end media 700px*/
 
 @media (max-width: 450px) {
   .main-section:has(.aside.show) {
@@ -92,19 +284,9 @@
       "header header"
       "aside content";
   }
+
   /* Hide sup-aside below 450px */
   .sup-aside.show {
     display: none;
   }
 }
-
-
- 
-
-
-
-
-
-
-
-
