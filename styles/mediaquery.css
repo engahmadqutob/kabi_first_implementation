@@ -18,10 +18,7 @@
 }
 
 @media (max-width:1200px) {
-  body {
-    background-color: blue;
-  }
-
+ 
   .budgeted-box {
     flex-wrap: wrap;
   }
@@ -44,9 +41,7 @@
 }
 
 @media (max-width:1120px) {
-  body {
-    background-color: teal;
-  }
+ 
 
   .card {
     height: auto;
@@ -54,9 +49,7 @@
 }
 
 @media (max-width:919px) {
-  body {
-    background-color: lightcoral;
-  }
+ 
 
   .card-information {
     flex-direction: column;
@@ -94,11 +87,7 @@
 }
 
 @media (max-width: 759px) {
-
-  /* hide some header parts to save space */
-  body {
-    background-color: lightblue;
-  }
+ 
 
   .user-info .user-languageBtn .btn,
   .user-info .user,
@@ -146,6 +135,7 @@
     opacity: 0;
   }
 
+  
   .aside.show {
     display: flex;
     /* use flex so the shown sidebars keep layout */
@@ -289,4 +279,19 @@
   .sup-aside.show {
     display: none;
   }
+  .vacancies-result {
+    margin-left:10px ;
+  }
+      .search-section .search-input input {
+   
+        margin-left: 10px;
+    }
+    
+
+.box
+
+ {
+        margin-right: 12px;
+ }
+
 }
